@@ -1,4 +1,6 @@
 const sheetID ="1irlmk_gDxKYofa0ygQ56wLWwN8ZSAlYBYubDYMUVCJM"
+const clientID = "363918754034-resujk2n1dvosni5q9st4u6jva9cn2l6.apps.googleusercontent.com"
+const APIKey = "AIzaSyDBO16jGXqg6QAjrsrjkTPgNDkb0Y-9USg"
 
 // Load the Google API client library
 gapi.load('client', initClient);
@@ -6,8 +8,8 @@ gapi.load('client', initClient);
 function initClient() {
   // Set up the API client with your client ID and API key
   gapi.client.init({
-    apiKey: 'AIzaSyDBO16jGXqg6QAjrsrjkTPgNDkb0Y-9USg',
-    clientId: '363918754034-resujk2n1dvosni5q9st4u6jva9cn2l6.apps.googleusercontent.com',
+    apiKey: APIKey,
+    clientId: clientID,
     discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
     scope: 'https://www.googleapis.com/auth/spreadsheets.readonly'
   }).then(function() {
