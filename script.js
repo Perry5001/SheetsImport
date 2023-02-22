@@ -13,7 +13,7 @@ gapi.load('auth2', function() {
     var idToken = user.getAuthResponse().id_token;
     
     // Make a request to the Google Sheets API using the ID token
-    fetch('https://sheets.googleapis.com/v4/spreadsheets/' + sheetID + '/values/Playoff!A1:L10', {
+    fetch('https://sheets.googleapis.com/v4/spreadsheets/' + sheetID + '/values/Playoffs!A1:L10', {
       headers: {
         Authorization: 'Bearer ' + idToken
       }
