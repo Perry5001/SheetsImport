@@ -1,6 +1,6 @@
 const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSMVyT1bIeWOlazjgwn9U1gwW1uZLU2VxH-IdCjOOvKOP5tGSwg3g08IUYM-ubYAUibfskKxaDbjnZY/pub?gid=1477902381&single=true&output=csv"
 
-fetch('https://example.com/data.csv')
+fetch(url)
   .then(response => response.text())
   .then(data => {
     const parsedData = Papa.parse(data, { header: true }).data;
@@ -20,3 +20,5 @@ fetch('https://example.com/data.csv')
       tableBody.appendChild(newRow);
     });
   });
+
+  
